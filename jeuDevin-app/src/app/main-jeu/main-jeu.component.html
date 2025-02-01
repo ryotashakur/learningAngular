@@ -1,1 +1,24 @@
-<p>main-jeu works!</p>
+<div class="game-container">
+    <h1>Devinez le Nombre Mystère</h1>
+  
+    <p>Tentatives restantes : {{ nbTentatives }}</p>
+  
+    <input
+      type="number"
+      [(ngModel)]="nombreSaisi"
+      [disabled]="finJeu"
+      placeholder="Entrez un nombre entre 1 et 100"
+    />
+  
+    <button (click)="verifierNombre()">{{ buttonText }}</button>
+  
+    <p class="message" [ngClass]="{
+      'blue': message === 'Trop Grand !' || message === 'Trop Petit !',
+      'green': message.includes('Bravo'),
+      'red': message.includes('Vous avez perdu'),
+      'black': message === 'Veuillez saisir un nombre valide !'
+    }">
+      {{ message }}
+    </p>
+  </div>
+  
