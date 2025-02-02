@@ -7,7 +7,7 @@ import { Observable, map } from 'rxjs';
 })
 export class DevinServiceService {
   private myApiUrl =
-    'https://www.random.org/integers/?num=1&min=1&max=101&col=1&base=10&format=plain&rnd=new';
+    'https://www.random.org/integers/?num=1&min=1&max=100&col=1&base=10&format=plain&rnd=new';
 
   constructor(private http: HttpClient) {}
 
